@@ -1,3 +1,6 @@
+import './message'
+import {Constants} from "discord.js";
+
 /*
 {
     'type': 'discord_on',
@@ -25,15 +28,10 @@ import Blockly from "blockly";
 Blockly.Blocks['discord_on'] = {
     init: function () {
         this.appendDummyInput()
-            .appendField('for each')
-            .appendField('item')
-            .appendField(new Blockly.FieldVariable());
-        this.appendValueInput('LIST')
-            .setCheck('Array')
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField('in list');
+            .appendField(new Blockly.FieldDropdown(Object.values(Constants.Events).map(r=>[r,r])))
+            .appendField('이벤트가 발생했을때')
         this.appendStatementInput('DO')
-            .appendField('do');
+            .appendField('실행하기');
         this.setOnChange(function (change) {
         })
     }
