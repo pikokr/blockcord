@@ -21,11 +21,10 @@ const blocks = [
                 ].map(r => [r, r])
             }
         ],
-
         'inputsInline': false,
         'nextStatement': null,
         'colour': 230,
-        'tooltip': '',
+        'tooltip': '디스코드 봇 이벤트가 발생했을때 실행되는 이벤트를 정의합니다',
         'helpUrl': ''
     }
 ]
