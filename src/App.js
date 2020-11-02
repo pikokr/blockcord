@@ -1,14 +1,13 @@
 import React from "react";
 import toolbox from "./toolbox";
 import Blockly from "blockly";
-import index from "./blocks";
+import './blocks'
 
 class App extends React.Component {
     componentDidMount() {
         const workspace = Blockly.inject('editor', {
             toolbox: toolbox
         })
-        Blockly.defineBlocksWithJsonArray(index)
         //workspace.addChangeListener(e => console.log(Blockly.JavaScript.workspaceToCode(workspace)))
     }
 

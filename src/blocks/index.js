@@ -1,3 +1,4 @@
+import './events'
 import {Constants} from "discord.js";
 
 const index = [
