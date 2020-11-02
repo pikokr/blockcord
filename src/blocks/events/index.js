@@ -32,7 +32,6 @@ Blockly.Blocks['discord_on'] = {
             .appendField('이벤트가 발생했을때')
         this.appendStatementInput('DO')
             .appendField('실행하기');
-        this.setOnChange(function (change) {
-        })
+        this.setColour(230)
     }
 }
