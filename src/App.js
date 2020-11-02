@@ -1,13 +1,15 @@
 import React from "react";
-import blocks from "./blocks";
+import toolbox from "./toolbox";
 import Blockly from "blockly";
+import blocks from "./blocks";
 
 class App extends React.Component {
     componentDidMount() {
         const workspace = Blockly.inject('editor', {
-            toolbox: document.getElementById('toolbox')
+            toolbox: toolbox
         })
-        workspace.addChangeListener(e => console.log(Blockly.JavaScript.workspaceToCode(workspace)))
+        Blockly.defineBlocksWithJsonArray(blocks)
+        //workspace.addChangeListener(e => console.log(Blockly.JavaScript.workspaceToCode(workspace)))
     }
 
     render() {
@@ -18,7 +20,6 @@ class App extends React.Component {
                     width: '100vw',
                     height: '100vh'
                 }}/>
-                <div dangerouslySetInnerHTML={{__html: blocks}}/>
             </div>
         )
     }
