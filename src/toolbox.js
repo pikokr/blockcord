@@ -41,7 +41,9 @@ const toolbox = {
             contents: [
                 {"kind": "block", "type": "discord_on_message"},
                 {"kind": "block", "type": "discord_message"},
-                {"kind": "block", "type": "discord_message_content"}
+                {"kind": "block", "type": "discord_message_content"},
+                {"kind": "block", "type": "discord_message_author"},
+                {"kind": "block", "type": "discord_message_channel"},
             ]
         }
     ]
