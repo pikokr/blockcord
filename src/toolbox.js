@@ -33,6 +33,12 @@ const toolbox = {
             name: 'Discord',
             contents: [
                 {"kind": "block", "type": "discord_on"},
+            ]
+        },
+        {
+            kind: 'category',
+            name: 'Message',
+            contents: [
                 {"kind": "block", "type": "discord_on_message"},
                 {"kind": "block", "type": "discord_message"},
                 {"kind": "block", "type": "discord_message_content"}
