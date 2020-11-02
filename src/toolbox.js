@@ -1,4 +1,3 @@
-
 const toolbox = {
     "kind": "categoryToolbox",
     "contents": [
@@ -23,51 +22,20 @@ const toolbox = {
         {
             "kind": "category",
             "name": "Logic",
-            "contents": [
-                {
-                    "kind": "block",
-                    "type": "logic_compare"
-                },
-                {
-                    "kind": "block",
-                    "type": "logic_operation"
-                },
-                {
-                    "kind": "block",
-                    "type": "logic_boolean"
-                }
-            ]
-        },
-        {
-            "kind": "category",
-            "name": "Variables",
-            "custom": "VARIABLE"
-        },
-        {
-            "kind": "category",
-            "name": "Functions",
-            "custom": "PROCEDURE"
-        },
+            "contents": [{"kind": "block", "type": "logic_compare"}, {
+                "kind": "block",
+                "type": "logic_operation"
+            }, {"kind": "block", "type": "logic_boolean"}]
+        }, {"kind": "category", "name": "Variables", "custom": "VARIABLE"},
+        {"kind": "category", "name": "Functions", "custom": "PROCEDURE"},
         {
             kind: "category",
             name: 'Discord',
             contents: [
-                {
-                    "kind": "block",
-                    "type": "discord_on"
-                },
-                {
-                    "kind": "block",
-                    "type": "discord_on_message"
-                },
-                {
-                    "kind": "block",
-                    "type": "discord_message"
-                },
-                {
-                    "kind": "block",
-                    "type": "discord_message_content"
-                }
+                {"kind": "block", "type": "discord_on"},
+                {"kind": "block", "type": "discord_on_message"},
+                {"kind": "block", "type": "discord_message"},
+                {"kind": "block", "type": "discord_message_content"}
             ]
         }
     ]
