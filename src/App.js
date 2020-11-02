@@ -8,6 +8,7 @@ class App extends React.Component {
         const workspace = Blockly.inject('editor', {
             toolbox: toolbox
         })
+        workspace.addChangeListener(Blockly.Events.disableOrphans)
         //workspace.addChangeListener(e => console.log(Blockly.JavaScript.workspaceToCode(workspace)))
     }
 
