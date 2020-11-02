@@ -17,7 +17,7 @@ registerRestrictions('discord_message_content', [
         type: "toplevelparent",
         message: "이 블록은 '메시지를 받았을 때' 블럭 안에서만 사용 가능해요!",
         types: [
-            "s4d_on_message"
+            "discord_on_message"
         ]
     }
 ]);
