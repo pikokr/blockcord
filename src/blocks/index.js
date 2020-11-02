@@ -1,6 +1,6 @@
 import {Constants} from "discord.js";
 
-const blocks = [
+const index = [
     {
         'type': 'discord_on',
         'message0': '디스코드 이벤트 %1 이(가) 발생했을때',
@@ -34,4 +34,4 @@ const blocks = [
 ]
 
 
-export default blocks
+export default index
