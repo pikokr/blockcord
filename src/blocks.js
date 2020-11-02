@@ -1,16 +1,16 @@
 const blocks = [
     {
-        "type": "discord_on",
-        "message0": "디스코드 이벤트 %1",
-        "args0": [
+        'type': 'discord_on',
+        'message0': '디스코드 이벤트 %1',
+        'args0': [
             {
-                "type": "field_dropdown",
-                "name": "이벤트",
-                "options": [
-                    "rateLimit",
-                    "ready",
-                    "resumed",
-                    "guildCreate",
+                'type': 'field_dropdown',
+                'name': '이벤트',
+                'options': [
+                    'rateLimit',
+                    'ready',
+                    'resumed',
+                    'guildCreate',
                     'guildDelete',
                     'guildUpdate',
                     'inviteCreate',
@@ -22,11 +22,11 @@ const blocks = [
             }
         ],
 
-        "inputsInline": false,
-        "nextStatement": null,
-        "colour": 230,
-        "tooltip": "",
-        "helpUrl": ""
+        'inputsInline': false,
+        'nextStatement': null,
+        'colour': 230,
+        'tooltip': '',
+        'helpUrl': ''
     }
 ]
 
