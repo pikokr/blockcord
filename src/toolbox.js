@@ -39,6 +39,16 @@ const toolbox = {
             ]
         },
         {
+            "kind": "category",
+            "name": "Variables",
+            "custom": "VARIABLE"
+        },
+        {
+            "kind": "category",
+            "name": "Functions",
+            "custom": "PROCEDURE"
+        },
+        {
             kind: "category",
             name: 'Discord',
             contents: [
@@ -53,6 +63,10 @@ const toolbox = {
                 {
                     "kind": "block",
                     "type": "discord_message"
+                },
+                {
+                    "kind": "block",
+                    "type": "discord_message_content"
                 }
             ]
         }

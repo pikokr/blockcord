@@ -1,12 +1,9 @@
 // https://github.com/Androz2091/scratch-for-discord/blob/3bc26abf36/src/restrictions.js
 
-import Blockly from "blockly";
-
 export const restrictions = {};
 
-export function registerRestrictions (blockName, blockRestrictions) {
+export function registerRestrictions(blockName, blockRestrictions) {
     restrictions[blockName] = blockRestrictions;
-    return;
 }
 
 const decode = (html) => {
@@ -16,14 +13,9 @@ const decode = (html) => {
 }
 
 export const disableUnapplicable = (workspace) => {
-
-    // Gets all blocks in the workspace
     const blocks = workspace.getAllBlocks(false);
-
-    // For each block of the workspace
     for (let block of blocks) {
 
-        // Checks
         if (!block) continue;
         if (!restrictions[block.type]) restrictions[block.type] = [];
 
@@ -34,13 +26,8 @@ export const disableUnapplicable = (workspace) => {
             if (!validateConfiguration(block, restriction)) continue;
 
             if (!validateRestriction(block, blocks, restriction)) {
-                if (restriction.message){
-                    if(Blockly.Msg[restriction.message]){
-                        messages.push(Blockly.Msg[restriction.message]);
-                    } else {
-                        window.alert("KEY NOT FOUND: "+restriction.message);
-                        messages.push(decode(restriction.message));
-                    }
+                if (restriction.message) {
+                    messages.push(decode(restriction.message))
                 }
                 issues++;
             }
@@ -49,7 +36,7 @@ export const disableUnapplicable = (workspace) => {
         if (issues < 1) {
             block.setWarningText(null);
         } else {
-            if (messages.length > 0){
+            if (messages.length > 0) {
                 block.setWarningText(messages.join("\n"));
             }
         }
@@ -73,10 +60,10 @@ function validateRestriction(block, blocks, restriction) {
         case "hasparent":
             return (hasParentOfType(block, restriction.types)) !== reverse;
         case "notempty":
-            for (let type of restriction.types){
+            for (let type of restriction.types) {
                 try {
                     if (!block.getInput(type).connection.targetBlock()) return false;
-                } catch(e){
+                } catch (e) {
                     console.log(block.type);
                 }
             }
@@ -106,10 +93,10 @@ function validateConfiguration(block, restriction) {
     }
 }
 
-function hasParentOfType(block, types){
+function hasParentOfType(block, types) {
     let hasParent = false;
-    while(block.getParent()){
-        if(types.includes(block.getParent().type)){
+    while (block.getParent()) {
+        if (types.includes(block.getParent().type)) {
             hasParent = true;
         }
         block = block.getParent();

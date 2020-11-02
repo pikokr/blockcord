@@ -1,19 +1,18 @@
 import Blockly from "blockly";
 import {registerRestrictions} from "../../restrictions";
-import './content'
 
-Blockly.Blocks['discord_message'] = {
+Blockly.Blocks['discord_message_content'] = {
     init: function () {
-        this.appendDummyInput()
+        this.appendValueInput('MSG')
+            .setCheck('Message')
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField('메시지')
+            .appendField('내용')
         this.setColour(230)
-        this.setOutput(true, 'Message')
-        this.setInputsInline(true)
+        this.setOutput(true, 'String')
     }
 }
 
-registerRestrictions('discord_message', [
+registerRestrictions('discord_message_content', [
     {
         type: "toplevelparent",
         message: "이 블록은 '메시지를 받았을 때' 블럭 안에서만 사용 가능해요!",
