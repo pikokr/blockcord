@@ -45,6 +45,10 @@ const toolbox = {
                 {
                     "kind": "block",
                     "type": "discord_on"
+                },
+                {
+                    "kind": "block",
+                    "type": "discord_on_message"
                 }
             ]
         }
