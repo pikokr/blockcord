@@ -1,3 +1,5 @@
+import {Constants} from "discord.js";
+
 const blocks = [
     {
         'type': 'discord_on',
@@ -6,19 +8,7 @@ const blocks = [
             {
                 'type': 'field_dropdown',
                 'name': '이벤트',
-                'options': [
-                    'rateLimit',
-                    'ready',
-                    'resumed',
-                    'guildCreate',
-                    'guildDelete',
-                    'guildUpdate',
-                    'inviteCreate',
-                    'inviteDelete',
-                    'guildUnavailable',
-                    'guildMemberAdd',
-                    'guildMemberRemove'
-                ].map(r => [r, r])
+                'options': Object.values(Constants.Events).map(r => [r, r])
             }
         ],
         'inputsInline': false,
