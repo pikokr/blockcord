@@ -31,7 +31,6 @@ Blockly.Blocks['discord_on'] = {
             .appendField(new Blockly.FieldDropdown(Object.values(Constants.Events).map(r=>[r,r])))
             .appendField('이벤트가 발생했을때')
         this.appendStatementInput('DO')
-            .appendField('실행하기');
         this.setColour(230)
     }
 }
