@@ -8,7 +8,7 @@ Blockly.Blocks['discord_message_author'] = {
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField('메시지를 전송한 유저')
         this.setColour(230)
-        this.setOutput(true, 'String')
+        this.setOutput(true, 'User')
     }
 }
 

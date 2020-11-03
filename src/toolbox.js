@@ -44,6 +44,7 @@ const toolbox = {
                 {"kind": "block", "type": "discord_message_content"},
                 {"kind": "block", "type": "discord_message_author"},
                 {"kind": "block", "type": "discord_message_channel"},
+                {"kind": "block", "type": "discord_send_message"},
             ]
         }
     ]

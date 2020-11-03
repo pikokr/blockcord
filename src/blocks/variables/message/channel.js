@@ -8,7 +8,7 @@ Blockly.Blocks['discord_message_channel'] = {
             .setAlign(Blockly.ALIGN_RIGHT)
             .appendField('메시지를 전송한 채널')
         this.setColour(230)
-        this.setOutput(true, 'String')
+        this.setOutput(true, 'Channel')
     }
 }
 
